@@ -12,10 +12,10 @@ module.exports.create = async (req, res, next) => {
     res.status(200).json({ servers: JSON.stringify(serverManager.servers)});
 }
 module.exports.getAll = async (req, res, next) => {
-    if(res.locals.user==null){
-        next();
-        return;
-    }
+    // if(res.locals.user==null){
+    //     next();
+    //     return;
+    // }
     res.status(200).json({ servers:JSON.stringify(ServerManager.getInstance().servers) });
 
 }
