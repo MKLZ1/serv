@@ -16,6 +16,6 @@ module.exports.getAll = async (req, res, next) => {
     //     next();
     //     return;
     // }
-    res.status(200).json({ servers:JSON.stringify(ServerManager.getInstance().servers) });
+    res.json({ servers:JSON.stringify(ServerManager.getInstance().servers) });
 
 }
